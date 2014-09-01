@@ -1,6 +1,6 @@
 var NAVTREE =
 [
-  [ "OpenArdBir", "index.html", [
+  [ "TestDocumentation", "index.html", [
     [ "A documentation page", "d0/db1/page1.html", [
       [ "An example section", "d0/db1/page1.html#sec", [
         [ "The first subsection", "d0/db1/page1.html#subsection1", null ],
