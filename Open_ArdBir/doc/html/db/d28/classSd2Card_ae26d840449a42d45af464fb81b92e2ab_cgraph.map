@@ -1,0 +1,5 @@
+<map id="Sd2Card::readBlock" name="Sd2Card::readBlock">
+<area shape="rect" id="node2" href="$db/d28/classSd2Card.html#ae2d1396ad30081b4201cd372358ef699" title="Read part of a 512 byte block from an SD card. " alt="" coords="193,31,325,57"/>
+<area shape="rect" id="node3" href="$db/d28/classSd2Card.html#a3ba97504f5928c932c346101d3dabfd2" title="Return the card type: SD V1, SD V2 or SDHC. " alt="" coords="385,5,490,32"/>
+<area shape="rect" id="node4" href="$db/d28/classSd2Card.html#a0de961537d051bbcafd87ed9fff5fe48" title="Skip remaining data in a block when in partial block read mode. " alt="" coords="373,56,501,83"/>
+</map>

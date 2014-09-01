@@ -1,0 +1,7 @@
+<map id="SdFile::truncate" name="SdFile::truncate">
+<area shape="rect" id="node2" href="$d0/dca/classSdFile.html#a413b50bca08dd037756ae064e30f784c" title="SdFile::isFile" alt="" coords="176,5,275,32"/>
+<area shape="rect" id="node3" href="$d0/dca/classSdFile.html#a5b8ea0ba6a9fec1ee8f1b11e90edb0c6" title="Sets a file&#39;s position. " alt="" coords="168,56,283,83"/>
+<area shape="rect" id="node5" href="$d0/dca/classSdFile.html#a742d64ca964583ac3a92b31f0eba5e14" title="The sync() call causes all modified data and directory fields to be written to the storage device..." alt="" coords="178,107,273,133"/>
+<area shape="rect" id="node4" href="$d0/dca/classSdFile.html#a385a138ffead941e46a95b07d6327475" title="SdFile::isOpen" alt="" coords="331,56,439,83"/>
+<area shape="rect" id="node6" href="$d0/dca/classSdFile.html#a8c656da3a6984395a70bee7932a2a933" title="SdFile::isDir" alt="" coords="339,107,432,133"/>
+</map>

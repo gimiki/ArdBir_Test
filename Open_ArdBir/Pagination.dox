@@ -1,0 +1,28 @@
+
+
+/*	\mainpage Arduino Libraries
+	\section Arduino SdFat Library
+*/
+
+/*! \page page1 A documentation page
+  \tableofcontents
+  Leading text.
+  \section sec An example section
+  This page contains the subsections \ref subsection1 and \ref subsection2.
+  For more info see page \ref page2.
+  \subsection subsection1 The first subsection
+  Text.
+  \subsection subsection2 The second subsection
+  More text.
+*/
+
+/*! \page page2 Another page
+  Even more info.
+*/
+
+/*! \page page3 Upload Hex File
+	\tableofcontents
+	Come caricare su arduino Leonardo un file hex. Non è stato testato con altri microcontrollori.
+	\attention
+	\# sudo /usr/share/arduino/hardware/tools/avrdude -C/usr/share/arduino/hardware/tools/avrdude.conf -v -v -v -v -patmega32u4 -cavr109 -P/dev/ttyACM0 -b57600 -D -Uflash:w:./path-to-hex:i
+*/ 

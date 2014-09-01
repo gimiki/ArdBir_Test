@@ -1,0 +1,4 @@
+<map id="Sd2Card::writeBlock" name="Sd2Card::writeBlock">
+<area shape="rect" id="node2" href="$db/d28/classSd2Card.html#a3ba97504f5928c932c346101d3dabfd2" title="Return the card type: SD V1, SD V2 or SDHC. " alt="" coords="210,5,315,32"/>
+<area shape="rect" id="node3" href="$db/d28/classSd2Card.html#af602d107e1ead2d0971e9f4c7b744cf8" title="Write one data block in a multiple block write sequence. " alt="" coords="195,56,330,83"/>
+</map>

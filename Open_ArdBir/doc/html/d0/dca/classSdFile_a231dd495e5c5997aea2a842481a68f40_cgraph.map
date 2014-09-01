@@ -1,0 +1,8 @@
+<map id="SdFile::createContiguous" name="SdFile::createContiguous">
+<area shape="rect" id="node2" href="$d0/dca/classSdFile.html#a07fc5c82318f073848e706f95830e5b5" title="Create and open a new contiguous file of a specified size. " alt="" coords="221,48,389,74"/>
+<area shape="rect" id="node3" href="$d0/dca/classSdFile.html#a9e211ac14784f48aebb213194336f8cc" title="Open a file by index. " alt="" coords="438,22,533,49"/>
+<area shape="rect" id="node6" href="$d0/dca/classSdFile.html#a742d64ca964583ac3a92b31f0eba5e14" title="The sync() call causes all modified data and directory fields to be written to the storage device..." alt="" coords="438,73,533,100"/>
+<area shape="rect" id="node4" href="$d0/dca/classSdFile.html#a385a138ffead941e46a95b07d6327475" title="SdFile::isOpen" alt="" coords="745,22,853,49"/>
+<area shape="rect" id="node5" href="$d0/dca/classSdFile.html#a5b8ea0ba6a9fec1ee8f1b11e90edb0c6" title="Sets a file&#39;s position. " alt="" coords="581,22,696,49"/>
+<area shape="rect" id="node7" href="$d0/dca/classSdFile.html#a8c656da3a6984395a70bee7932a2a933" title="SdFile::isDir" alt="" coords="592,124,685,150"/>
+</map>

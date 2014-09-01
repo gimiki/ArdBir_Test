@@ -1,0 +1,7 @@
+<map id="cache_t" name="cache_t">
+<area shape="rect" id="node2" href="$d7/d3a/structdirectoryEntry.html" title="FAT short directory entry. " alt="" coords="5,96,107,123"/>
+<area shape="rect" id="node3" href="$d9/dda/structfat32BootSector.html" title="Boot sector for a FAT16 or FAT32 volume. " alt="" coords="131,96,247,123"/>
+<area shape="rect" id="node4" href="$d6/d08/structbiosParmBlock.html" title="BIOS parameter block. " alt="" coords="134,5,244,32"/>
+<area shape="rect" id="node5" href="$d7/d20/structmasterBootRecord.html" title="Master Boot Record. " alt="" coords="272,96,401,123"/>
+<area shape="rect" id="node6" href="$db/d38/structpartitionTable.html" title="MBR partition table entry. " alt="" coords="287,5,387,32"/>
+</map>

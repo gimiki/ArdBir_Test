@@ -1,0 +1,26 @@
+var annotated =
+[
+    [ "_DELAY_TABLE", "d0/d57/struct__DELAY__TABLE.html", "d0/d57/struct__DELAY__TABLE" ],
+    [ "biosParmBlock", "d6/d08/structbiosParmBlock.html", "d6/d08/structbiosParmBlock" ],
+    [ "cache_t", "d0/d08/unioncache__t.html", "d0/d08/unioncache__t" ],
+    [ "CID", "d5/da8/structCID.html", "d5/da8/structCID" ],
+    [ "csd_t", "d8/d49/unioncsd__t.html", "d8/d49/unioncsd__t" ],
+    [ "CSDV1", "da/d7a/structCSDV1.html", "da/d7a/structCSDV1" ],
+    [ "CSDV2", "d4/d63/structCSDV2.html", "d4/d63/structCSDV2" ],
+    [ "directoryEntry", "d7/d3a/structdirectoryEntry.html", "d7/d3a/structdirectoryEntry" ],
+    [ "EEPROMClass", "db/dad/classEEPROMClass.html", "db/dad/classEEPROMClass" ],
+    [ "fat32BootSector", "d9/dda/structfat32BootSector.html", "d9/dda/structfat32BootSector" ],
+    [ "File", "db/d30/classFile.html", "db/d30/classFile" ],
+    [ "LiquidCrystal", "d2/dd6/classLiquidCrystal.html", "d2/dd6/classLiquidCrystal" ],
+    [ "masterBootRecord", "d7/d20/structmasterBootRecord.html", "d7/d20/structmasterBootRecord" ],
+    [ "OneWire", "de/dde/classOneWire.html", "de/dde/classOneWire" ],
+    [ "partitionTable", "db/d38/structpartitionTable.html", "db/d38/structpartitionTable" ],
+    [ "PID", "d8/da9/classPID.html", "d8/da9/classPID" ],
+    [ "pin_map_t", "d8/d54/structpin__map__t.html", "d8/d54/structpin__map__t" ],
+    [ "Sd2Card", "db/d28/classSd2Card.html", "db/d28/classSd2Card" ],
+    [ "SDClass", "d5/d1c/classSDClass.html", "d5/d1c/classSDClass" ],
+    [ "SdFile", "d0/dca/classSdFile.html", "d0/dca/classSdFile" ],
+    [ "SdVolume", "d4/d82/classSdVolume.html", "d4/d82/classSdVolume" ],
+    [ "SoftwareSerial", "d2/de7/classSoftwareSerial.html", "d2/de7/classSoftwareSerial" ],
+    [ "SPIClass", "d7/df3/classSPIClass.html", null ]
+];

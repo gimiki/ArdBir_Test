@@ -1,0 +1,10 @@
+<map id="SdFile::rmRfStar" name="SdFile::rmRfStar">
+<area shape="rect" id="node2" href="$d0/dca/classSdFile.html#afa8aaa7bdeb97b4e691ea01adf99f654" title="Set the file&#39;s current position to zero. " alt="" coords="340,207,444,233"/>
+<area shape="rect" id="node3" href="$d0/dca/classSdFile.html#a9e211ac14784f48aebb213194336f8cc" title="Open a file by index. " alt="" coords="345,80,439,107"/>
+<area shape="rect" id="node5" href="$d0/dca/classSdFile.html#a5b8ea0ba6a9fec1ee8f1b11e90edb0c6" title="Sets a file&#39;s position. " alt="" coords="499,131,613,157"/>
+<area shape="rect" id="node6" href="$d0/dca/classSdFile.html#a882e847b95aa47158d3df7ed7072d11e" title="SdFile::isSubDir" alt="" coords="334,308,450,335"/>
+<area shape="rect" id="node7" href="$d0/dca/classSdFile.html#ab932b7896dce90a29031f3a9039807a2" title="Remove a file. " alt="" coords="174,29,285,56"/>
+<area shape="rect" id="node8" href="$d0/dca/classSdFile.html#a0d0a535b287768e2ffa3b40c2e528ca4" title="SdFile::isRoot" alt="" coords="177,283,281,309"/>
+<area shape="rect" id="node9" href="$d0/dca/classSdFile.html#a0d9e0c280b3469bb15e7258f6339746b" title="Remove a directory file. " alt="" coords="180,232,279,259"/>
+<area shape="rect" id="node4" href="$d0/dca/classSdFile.html#a385a138ffead941e46a95b07d6327475" title="SdFile::isOpen" alt="" coords="662,105,770,132"/>
+</map>

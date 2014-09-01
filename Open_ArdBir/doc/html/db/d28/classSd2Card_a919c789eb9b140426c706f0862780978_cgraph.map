@@ -1,0 +1,4 @@
+<map id="Sd2Card::init" name="Sd2Card::init">
+<area shape="rect" id="node2" href="$db/d28/classSd2Card.html#a3ba97504f5928c932c346101d3dabfd2" title="Return the card type: SD V1, SD V2 or SDHC. " alt="" coords="174,5,279,32"/>
+<area shape="rect" id="node3" href="$db/d28/classSd2Card.html#ad849b8896de9abd4e24bd98f4204ccc4" title="Set the SPI clock rate. " alt="" coords="153,56,301,83"/>
+</map>

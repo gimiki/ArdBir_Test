@@ -1,0 +1,8 @@
+<map id="SdFile::remove" name="SdFile::remove">
+<area shape="rect" id="node2" href="$d0/dca/classSdFile.html#ade1e2b72f89b24f500502518fd678abd" title="Truncate a file to a specified length. " alt="" coords="165,56,280,83"/>
+<area shape="rect" id="node3" href="$d0/dca/classSdFile.html#a413b50bca08dd037756ae064e30f784c" title="SdFile::isFile" alt="" coords="336,5,435,32"/>
+<area shape="rect" id="node4" href="$d0/dca/classSdFile.html#a5b8ea0ba6a9fec1ee8f1b11e90edb0c6" title="Sets a file&#39;s position. " alt="" coords="328,56,443,83"/>
+<area shape="rect" id="node6" href="$d0/dca/classSdFile.html#a742d64ca964583ac3a92b31f0eba5e14" title="The sync() call causes all modified data and directory fields to be written to the storage device..." alt="" coords="338,107,433,133"/>
+<area shape="rect" id="node5" href="$d0/dca/classSdFile.html#a385a138ffead941e46a95b07d6327475" title="SdFile::isOpen" alt="" coords="491,56,599,83"/>
+<area shape="rect" id="node7" href="$d0/dca/classSdFile.html#a8c656da3a6984395a70bee7932a2a933" title="SdFile::isDir" alt="" coords="499,107,592,133"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="SdFile::openRoot" name="SdFile::openRoot">
+<area shape="rect" id="node2" href="$d0/dca/classSdFile.html#a385a138ffead941e46a95b07d6327475" title="SdFile::isOpen" alt="" coords="219,5,327,32"/>
+<area shape="rect" id="node3" href="$d4/d82/classSdVolume.html#a5aefec18d8b66c55274973b45c33a43d" title="SdVolume::fatType" alt="" coords="206,56,341,83"/>
+<area shape="rect" id="node4" href="$d4/d82/classSdVolume.html#a27b5b8b8e167d28d14afa25c55037f92" title="SdVolume::rootDirEntryCount" alt="" coords="177,107,370,133"/>
+<area shape="rect" id="node5" href="$d4/d82/classSdVolume.html#a5ea7bb3b2072b952c11b5614f1e69866" title="SdVolume::rootDirStart" alt="" coords="195,157,351,184"/>
+</map>

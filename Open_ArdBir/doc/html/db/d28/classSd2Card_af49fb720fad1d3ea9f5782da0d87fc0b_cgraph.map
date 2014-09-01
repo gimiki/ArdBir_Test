@@ -1,0 +1,4 @@
+<map id="Sd2Card::erase" name="Sd2Card::erase">
+<area shape="rect" id="node2" href="$db/d28/classSd2Card.html#a2e3998f6e910a2936d3ef54bf082b2ce" title="Determine if card supports single block erase. " alt="" coords="165,5,347,46"/>
+<area shape="rect" id="node3" href="$db/d28/classSd2Card.html#a79845d8d4593cb3b1b7641ba27edddfb" title="Read a cards CSD register. " alt="" coords="395,12,527,39"/>
+</map>
