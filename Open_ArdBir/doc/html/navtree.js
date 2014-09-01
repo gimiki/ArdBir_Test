@@ -9,6 +9,7 @@ var NAVTREE =
     ] ],
     [ "Another page", "da/d44/page2.html", null ],
     [ "Upload Hex File", "d6/d5c/page3.html", null ],
+    [ "README", "d0/d30/md_README.html", null ],
     [ "Files", null, [
       [ "File List", "files.html", "files" ],
       [ "Globals", "globals.html", [
@@ -22,7 +23,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"d0/db1/page1.html"
+"d0/d30/md_README.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
