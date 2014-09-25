@@ -1,6 +1,6 @@
 char *PIDName[]   ={"Konstante  P", "Konstante  I", "Konstante  D", "Finestra  ms", "PWM         ", "Calibracion "};
 char *stageName[] ={"Mash In   ", "Fitasa    ", "Glucanasa ", "Proteasa  ", "bAmilasa  ", "aAmilasa1 ", "aAmilasa2 ", "Mash Out  ", "Ebullicion"};
-char *unitName[]  ={"Escala     ", "Sensor     ", "Ebullicion ", "Ebullicion ", "Ciclo Bomba", "Pausa Bomba", "Bmb en Ebul", "Bomba Parada"};
+char *unitName[]  ={"Escala     ", "Sensor     ", "Ebullicion ", "Ebullicion ", "Ciclo Bomba", "Pausa Bomba", "Bmb en Ebul", "Bomba Parada", "PID Pipe   ", "TiempoYodo "};
 
 byte HeatONOFF[8]    = {B00000, B01110, B01010, B01010, B01100, B01010, B01010, B00000};  // [5] HEAT symbol
 byte RevHeatONOFF[8] = {B11111, B10001, B10101, B10101, B10011, B10101, B10101, B11111};  // [6] reverse HEAT symbol
@@ -36,7 +36,7 @@ void Clear_2_3(){
 void Version(byte locX, byte locY){
   lcd.setCursor(locX, locY);
   //lcd.print(Version20);
-  lcd.print(F("2.6.63b"));
+  lcd.print(F("2.6.70b"));
   lcd.write(7);
 }
 
@@ -331,10 +331,27 @@ void UnitSet(byte unitSet, byte i){
     case(7):
       //lcd.setCursor(15,2);
       LCDSpace(3);
+      PrintTemp(unitSet,0);
+      /*
+      if (unitSet<10)LCDSpace(1);
       if (unitSet<100)LCDSpace(1);
       lcd.print(unitSet);
-      //Gradi();
       lcd.write((byte)0);
+      */
+      break;
+      
+    case(8)://Pipe
+      LCDSpace(2);
+      if (unitSet==0)lcd.print(F("Pasivo"));
+      else lcd.print(F("Activo"));
+      break;
+    
+    case(9): //Iodio
+     if (unitSet==0){
+        lcd.setCursor(12,2);
+        lcd.print(F("    OFF"));
+      }else CountDown(unitSet*60,12,2,1);
+      break;
   }  
 }
 
@@ -681,8 +698,8 @@ void Iodine(float Temp, int Time){
   PauseScreen();
   
     
-  lcd.setCursor(4,1);
-  lcd.print(F("PRUEBA  YODO"));
+  lcd.setCursor(1,1);
+  lcd.print(F("   PRUEBA  YODO   "));
   
   lcd.setCursor(7,0);
   PrintTemp(Temp);
@@ -737,16 +754,17 @@ void ledPumpStatus(boolean mpump){
 }
 
 void ArdBir(){
-  Presentazione(2,1);
+  //Presentazione(2,1);
   ArdBir1(6,1);
 }
 
 void PartenzaRitardata(){
   Clear_2_3();
   lcd.setCursor(2,2);
-  lcd.print(F("Comenzar Ahora?"));
+  //lcd.print(F("Comenzar Ahora?"));
+  lcd.print(F("Retrasar Inicio?"));
   lcd.setCursor(14,3);
-  lcd.print(F("Si No")); 
+  lcd.print(F("No Si ")); 
 }
 
 void ImpostaTempo(unsigned long Time){

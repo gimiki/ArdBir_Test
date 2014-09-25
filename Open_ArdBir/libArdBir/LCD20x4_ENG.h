@@ -1,6 +1,6 @@
 char *PIDName[]   ={"Konstant   P", "Konstant   I", "Konstant   D", "Windowset ms", "Heat in Boil", "Calibration "};
 char *stageName[] ={"Mash In   ", "Phytase   ", "Glucanase ", "Protease  ", "bAmylase  ", "aAmylase1 ", "aAmylase2 ", "Mash Out  ", "Boil      "};
-char *unitName[]  ={"Set Degrees", "Sensor     ", "Temp Boil  ", "Temp Boil  ", "Pump Cycle ", "Pump Rest  ", "Pmp on Boil", "Pump Stop  "};
+char *unitName[]  ={"Set Degrees", "Sensor     ", "Temp Boil  ", "Temp Boil  ", "Pump Cycle ", "Pump Rest  ", "Pmp on Boil", "Pump Stop  ", "PID Pipe   ", "IodineTime "};
 
 byte HeatONOFF[8]    = {B00000, B01010, B01010, B01110, B01110, B01010, B01010, B00000};  // [5] HEAT symbol
 byte RevHeatONOFF[8] = {B11111, B10101, B10101, B10001, B10001, B10101, B10101, B11111};  // [6] reverse HEAT symbol
@@ -19,11 +19,10 @@ void LCDClear(byte Riga){
   LCDSpace(20);
 }
 
-void PrintTemp(float Temp){
+void PrintTemp(float Temp, byte dec){
   if (Temp<10.0)LCDSpace(2);
   if (Temp>=10.0 && Temp<100.0)LCDSpace(1);
-  lcd.print(Temp);
-
+  lcd.print(Temp, dec);
   //Gradi();
   lcd.write((byte)0);
 }
@@ -36,7 +35,7 @@ void Clear_2_3(){
 void Version(byte locX, byte locY){
   lcd.setCursor(locX, locY);
   //lcd.print(Version20);
-  lcd.print(F("2.6.63b"));
+  lcd.print(F("2.6.70b"));
   lcd.write(7);
 }
 
@@ -62,7 +61,7 @@ void LCD_Default(float Temp){
   Intestazione();
   
   lcd.setCursor(6,1);
-  PrintTemp(Temp);
+  PrintTemp(Temp,2);
 
   LCDClear(2);
   
@@ -122,7 +121,7 @@ void Menu_1(){
 
 void Manuale(float Set, float Temp,float TempBoil){    
   lcd.setCursor(1,1);
-  PrintTemp(Temp);
+  PrintTemp(Temp,2);
 
   lcd.setCursor(12,1);
   if (Set<100)LCDSpace(1);
@@ -154,7 +153,7 @@ void Stage(byte Stage, float Set, float Temp){
   lcd.print(stageName[Stage]);
   
   lcd.setCursor(1,1);
-  PrintTemp(Temp);
+  PrintTemp(Temp,2);
 
   lcd.setCursor(8,1);
   LCDSpace(4);
@@ -181,7 +180,7 @@ void RemoveMalt(){
 
 void Temp_Wait(float Temp){
   lcd.setCursor(1,1);
-  PrintTemp(Temp);
+  PrintTemp(Temp,2);
 }
 
 void Boil(float Heat, float Temp, byte Tipo){
@@ -191,7 +190,7 @@ void Boil(float Heat, float Temp, byte Tipo){
   }
   
   lcd.setCursor(1,1);
-  PrintTemp(Temp);
+  PrintTemp(Temp,2);
   
   lcd.setCursor(1,2);
   lcd.print(F("PWM="));    //Display output%
@@ -293,9 +292,12 @@ void UnitSet(byte unitSet, byte i){
     default:// Temperatura di Ebollizione
       //lcd.setCursor(14,2);
       LCDSpace(3);
+      PrintTemp(unitSet,0);
+      /*
       if (unitSet<100)LCDSpace(1);
       lcd.print(unitSet);
       lcd.write((byte)0);
+      */
       break;
     /*
     case(3):// Temperatura di Ebollizione F
@@ -331,10 +333,27 @@ void UnitSet(byte unitSet, byte i){
     case(7):
       //lcd.setCursor(15,2);
       LCDSpace(3);
+      PrintTemp(unitSet,0);
+      /*
+      if (unitSet<10)LCDSpace(1);
       if (unitSet<100)LCDSpace(1);
       lcd.print(unitSet);
-      //Gradi();
       lcd.write((byte)0);
+      */
+      break;
+      
+    case(8)://Pipe
+      //LCDSpace(1);
+      if (unitSet==0)lcd.print(F("Passive"));
+      else lcd.print(F("Active "));
+      break;
+    
+    case(9): //Iodio
+     if (unitSet==0){
+        lcd.setCursor(12,2);
+        lcd.print(F("    OFF"));
+      }else CountDown(unitSet*60,12,2,1);
+      break;
   }  
 }
 
@@ -353,7 +372,7 @@ void Menu_3_3_x(byte Stage){
 
 void StageSet(float Temp){
   lcd.setCursor(12,2);
-  PrintTemp(Temp);
+  PrintTemp(Temp,2);
 }
 
 void TimeSet(int Time){
@@ -636,7 +655,7 @@ void Pause_Stage(float Temp, int Time){
   lcd.print(F("     In Pause     " ));
   
   lcd.setCursor(7,0);
-  PrintTemp(Temp);
+  PrintTemp(Temp,2);
   
 //  CountDown(Time,6,2,2);
   Watch (Time);
@@ -666,7 +685,7 @@ void PausaPompa(float Temp, int Time){
 //  }
   
   lcd.setCursor(1,1);
-  PrintTemp(Temp);
+  PrintTemp(Temp,2);
 
 //  CountDown(Time,11,2,2);
   CntDwn(Time);
@@ -685,7 +704,7 @@ void Iodine(float Temp, int Time){
   lcd.print(F("   IODINE  TEST   " ));
   
   lcd.setCursor(7,0);
-  PrintTemp(Temp);
+  PrintTemp(Temp,2);
   
 //  CountDown(Time,6,2,2);
   Watch (Time);
@@ -737,16 +756,16 @@ void ledPumpStatus(boolean mpump){
 }
 
 void ArdBir(){
-  Presentazione(2,1);
+  //Presentazione(2,1);
   ArdBir1(6,1);
 }
 
 void PartenzaRitardata(){
   Clear_2_3();
-  lcd.setCursor(5,2);
-  lcd.print(F("Start Now?"));
+  lcd.setCursor(3,2);
+  lcd.print(F("Delay Start?"));
   lcd.setCursor(13,3);
-  lcd.print(F("Yes No")); 
+  lcd.print(F("No Yes")); 
 }
 
 void ImpostaTempo(unsigned long Time){
