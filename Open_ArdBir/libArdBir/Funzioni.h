@@ -128,16 +128,16 @@ void CountDown(unsigned long Tempo, byte posX, byte posY, byte numH){
   
   lcd.setCursor(posX, posY);
   if (numH==2){
-    if(Ore<10)lcd.print("0");
+    if(Ore<10)lcd.print(F("0"));
   }
   lcd.print(Ore);
   
   lcd.print(F(":"));    
-  if(Minuti<10)lcd.print("0");
+  if(Minuti<10)lcd.print(F("0"));
   lcd.print(Minuti);
   
   lcd.print(F(":"));    
-  if(Secondi<10)lcd.print("0");
+  if(Secondi<10)lcd.print(F("0"));
   lcd.print(Secondi);
 }
 

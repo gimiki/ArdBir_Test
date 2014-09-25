@@ -1,6 +1,6 @@
 char *PIDName[]   ={"Constante  P", "Constante  I", "Constante  D", "Janela  ms  ", "PWM         ", "Calibragem  "};
 char *stageName[] ={"Mash In   ", "Fitase    ", "Glucanase ", "Protease  ", "bAmilase  ", "aAmilase  ", "aAmilase2 ", "Mash Out  ", "Ebulicao  "};
-char *unitName[]  ={"Escala     ", "Sensor     ", "Ebulicao   ", "Ebulicao   ", "Ciclo Bomba", "Pausa Bomba", "Bomb em Ebu", "Bomb Parada", "PID Pipe  " , "TempoIodo "};
+char *unitName[]  ={"Escala     ", "Sensor     ", "Ebulicao   ", "Ebulicao   ", "Ciclo Bomba", "Pausa Bomba", "Bomb em Ebu", "Bomb Parada"};
 
 byte HeatONOFF[8]    = {B00000, B01110, B01010, B01010, B01100, B01010, B01010, B00000};  // [5] HEAT symbol
 byte RevHeatONOFF[8] = {B11111, B10001, B10101, B10101, B10011, B10101, B10101, B11111};  // [6] reverse HEAT symbol
@@ -36,7 +36,7 @@ void Clear_2_3(){
 void Version(byte locX, byte locY){
   lcd.setCursor(locX, locY);
   //lcd.print(Version20);
-  lcd.print(F("2.6.70b"));
+  lcd.print(F("2.6.63b"));
   lcd.write(7);
 }
 
@@ -331,27 +331,10 @@ void UnitSet(byte unitSet, byte i){
     case(7):
       //lcd.setCursor(15,2);
       LCDSpace(3);
-      PrintTemp(unitSet,0);
-      /*
-      if (unitSet<10)LCDSpace(1);
       if (unitSet<100)LCDSpace(1);
       lcd.print(unitSet);
+      //Gradi();
       lcd.write((byte)0);
-      */
-      break;
-      
-    case(8)://Pipe
-      LCDSpace(1);
-      if (unitSet==0)lcd.print(F("Passiva"));
-      else lcd.print(F("Ativa  "));
-      break;
-    
-    case(9): //Iodio
-     if (unitSet==0){
-        lcd.setCursor(12,2);
-        lcd.print(F("    OFF"));
-      }else CountDown(unitSet*60,12,2,1);
-      break;
   }  
 }
 
@@ -754,17 +737,16 @@ void ledPumpStatus(boolean mpump){
 }
 
 void ArdBir(){
-  //Presentazione(2,1);
+  Presentazione(2,1);
   ArdBir1(6,1);
 }
 
 void PartenzaRitardata(){
   Clear_2_3();
-  lcd.setCursor(2,2);
-  //lcd.print(F("Comecar Agora?"));
-  lcd.print(F("Atrasar  Inicio?"));
+  lcd.setCursor(3,2);
+  lcd.print(F("Comecar Agora?"));
   lcd.setCursor(12,3);
-  lcd.print(F("Nao Sim")); 
+  lcd.print(F("Sim  Nao")); 
 }
 
 void ImpostaTempo(unsigned long Time){

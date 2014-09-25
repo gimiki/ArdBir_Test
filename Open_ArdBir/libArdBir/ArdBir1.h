@@ -39,6 +39,6 @@ void ArdBir1 (byte posX, byte posY){
 
   lcd.setCursor(posX+6,posY+1);
   lcd.print(F("ir"));
-  delay(4000);
+  delay(3500);
 }
 
